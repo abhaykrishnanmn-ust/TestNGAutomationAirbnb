@@ -8,7 +8,7 @@ public class HomePageTest extends BaseTest {
 
 
     @Test
-    void openWebsite() {
+    public void destination() {
         openWebPage();
         verify_user_is_on_homepage();
         user_clicks_on_where();
@@ -17,6 +17,7 @@ public class HomePageTest extends BaseTest {
         select_number_of_people();
         user_click_on_search_button();
     }
+
 
     public void openWebPage() {
         homePage.openWebsite();
