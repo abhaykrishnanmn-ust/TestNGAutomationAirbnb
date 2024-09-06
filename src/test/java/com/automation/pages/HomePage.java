@@ -211,7 +211,7 @@ public class HomePage extends BasePage{
         }
     }
 
-    public void selectRegion(String region) {
+    public void selectRegion() {
         clickOnRegion.click();
     }
 

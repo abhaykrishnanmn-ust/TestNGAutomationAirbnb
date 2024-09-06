@@ -1,6 +1,5 @@
 package com.automation.test;
 
-import com.automation.utils.ConfigReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,10 +9,16 @@ public class HomePageTest extends BaseTest {
 
     @Test
     void openWebsite() {
-        homePage.openWebsite();
+        openWebPage();
+        verify_user_is_on_homepage();
+        user_clicks_on_where();
+        user_selects_destination_by();
+        select_check_in_and_check_out_date();
+        select_number_of_people();
+        user_click_on_search_button();
     }
 
-    public void userOpensWebsite() {
+    public void openWebPage() {
         homePage.openWebsite();
     }
 
@@ -29,8 +34,8 @@ public class HomePageTest extends BaseTest {
     }
 
 
-    public void user_selects_destination_by(String region) {
-        homePage.selectRegion(ConfigReader.getConfigValue(region));
+    public void user_selects_destination_by() {
+        homePage.selectRegion();
     }
 
     public void select_check_in_and_check_out_date() {
