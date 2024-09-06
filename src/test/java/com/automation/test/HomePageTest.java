@@ -4,7 +4,6 @@ import com.automation.utils.ConfigReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Instant;
 
 public class HomePageTest extends BaseTest {
 
@@ -21,7 +20,7 @@ public class HomePageTest extends BaseTest {
 
     public void verify_user_is_on_homepage() {
         Assert.assertTrue(homePage.isHomePageDisplayed());
-        ReportManager.attachScreenShot();
+
     }
 
 
@@ -31,7 +30,7 @@ public class HomePageTest extends BaseTest {
 
 
     public void user_selects_destination_by(String region) {
-        homePage.selectRegion(ConfigReader.getValue(region));
+        homePage.selectRegion(ConfigReader.getConfigValue(region));
     }
 
     public void select_check_in_and_check_out_date() {
@@ -61,7 +60,7 @@ public class HomePageTest extends BaseTest {
 
     public void verify_language_options_are_displayed() {
         Assert.assertTrue(homePage.verifyLanguageIsDisplayed());
-        ReportManager.attachScreenShot();
+
     }
 
     public void user_clicks_on_language() {
@@ -70,7 +69,7 @@ public class HomePageTest extends BaseTest {
 
     public void verify_language_is_changed_to_the_selected_language() {
         Assert.assertTrue(homePage.verifyLanguageIsChanged());
-        ReportManager.attachScreenShot();
+
     }
 
     public void userTypesLocationInTheSearchDestinationField(String destination) {
@@ -107,7 +106,7 @@ public class HomePageTest extends BaseTest {
 
     public void verify_displayed_details_with_the_host_details() {
         Assert.assertTrue(homePage.verifyDisplayedDetailsOfHost());
-        ReportManager.attachScreenShot();
+
     }
 
     public void userClicksOnProfileIcon() {
@@ -141,10 +140,9 @@ public class HomePageTest extends BaseTest {
     }
 
 
-
     public void verifyDisplayedDetailsWithTheText(String message) {
         Assert.assertTrue(homePage.verifyThingsToDoMessage(message));
-        ReportManager.attachScreenShot();
+
     }
 
 
@@ -155,13 +153,13 @@ public class HomePageTest extends BaseTest {
 
     public void verifyImageDisplayedIsSecond(String page) {
         Assert.assertTrue(homePage.verifySlidingImage(page));
-        ReportManager.attachScreenShot();
+
     }
 
 
     public void verifyTotalBeforePriceIsDisplayedInThePage() {
         Assert.assertTrue(homePage.isTotalPriceBeforePageIsDisplayed());
-        ReportManager.attachScreenShot();
+
     }
 
 
@@ -188,7 +186,7 @@ public class HomePageTest extends BaseTest {
 
     public void verify_currency_is_changed_to_the_selected_currency() {
         Assert.assertTrue(homePage.verifyCurrency());
-        ReportManager.attachScreenShot();
+
     }
 
     public void userSelectsGuestFavouritesInTopTierStays() {
