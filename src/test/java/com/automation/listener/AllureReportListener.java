@@ -10,7 +10,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class ExtentReportListener extends BaseTest implements ITestListener {
+public class AllureReportListener extends BaseTest implements ITestListener {
     private static ExtentReports extent;
     private static ExtentTest test;
 
