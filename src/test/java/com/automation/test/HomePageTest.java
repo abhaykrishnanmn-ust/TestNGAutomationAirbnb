@@ -9,13 +9,14 @@ public class HomePageTest extends BaseTest {
 
     @Test
     public void destination() {
-        openWebPage();
-        verify_user_is_on_homepage();
-        user_clicks_on_where();
-        user_selects_destination_by();
-        select_check_in_and_check_out_date();
-        select_number_of_people();
-        user_click_on_search_button();
+        homePage.openWebsite();
+        Assert.assertTrue(homePage.isHomePageDisplayed());
+        homePage.clickOnWhere();
+        homePage.selectRegion();
+        homePage.selectCheckInDate();
+        homePage.selectCheckOutDate();
+        homePage.selectNumberOfPeople();
+        homePage.clickOnSearch();
     }
 
 
