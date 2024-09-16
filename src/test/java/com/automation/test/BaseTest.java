@@ -1,7 +1,7 @@
 package com.automation.test;
 
 
-import com.automation.pages.HomePage;
+import com.automation.pages.*;
 
 import com.automation.utils.ConfigReader;
 import com.automation.utils.DriverManager;
@@ -22,7 +22,10 @@ public class BaseTest {
 
 
     HomePage homePage;
-
+    SearchPage searchPage;
+    BookingPage bookingPage;
+    AirbnbYourHomePage airbnbYourHomePage;
+    HelpCenterPage helpCenterPage;
 
 
     @BeforeMethod
@@ -33,8 +36,10 @@ public class BaseTest {
         DriverManager.createDriver();
 
         homePage = new HomePage();
-
-
+        searchPage=new SearchPage();
+        bookingPage=new BookingPage();
+        airbnbYourHomePage=new AirbnbYourHomePage();
+        helpCenterPage=new HelpCenterPage();
     }
 
     @AfterMethod
