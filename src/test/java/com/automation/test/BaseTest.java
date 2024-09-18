@@ -37,6 +37,7 @@ public class BaseTest {
 
     }
 
+
     @AfterMethod
     public void cleanUp() {
         DriverManager.getDriver().quit();

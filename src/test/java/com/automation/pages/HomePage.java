@@ -202,7 +202,7 @@ public class HomePage extends BasePage{
     WebElement aboutMeetYourHost;
 
     public void openWebsite() {
-        driver.navigate().to(ConfigReader.getConfigValue("url"));
+        driver.navigate().to(ConfigReader.getValue("url"));
     }
 
     public void clickOnWhere() {
@@ -276,7 +276,7 @@ public class HomePage extends BasePage{
 
     public boolean verifyLanguageIsChanged() {
 //        globeButton.click();
-        return languageSelected.getText().contains(ConfigReader.getConfigValue("language"));
+        return languageSelected.getText().contains(ConfigReader.getValue("language"));
     }
 
     public void searchDestinationInStays(String destination) {
@@ -322,7 +322,7 @@ public class HomePage extends BasePage{
     }
 
     public boolean verifyDisplayedDetailsOfHost() {
-        return aboutMeetYourHost.getText().contains(ConfigReader.getConfigValue("meet.your.host.name"));
+        return aboutMeetYourHost.getText().contains(ConfigReader.getValue("meet.your.host.name"));
     }
 
     public void profileIconSelection() {
@@ -457,7 +457,7 @@ public class HomePage extends BasePage{
         scrollThePage(currencyDisplayedOnFooter);
 //        System.out.println(ConfigReader.getValue("new.currency"));
 //        System.out.println(currencyDisplayedOnFooter.getText());
-        return ConfigReader.getConfigValue("new.currency").contains(currencyDisplayedOnFooter.getText());
+        return ConfigReader.getValue("new.currency").contains(currencyDisplayedOnFooter.getText());
     }
 
 }
