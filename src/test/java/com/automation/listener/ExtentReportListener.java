@@ -20,7 +20,7 @@ public class ExtentReportListener extends BaseTest implements ITestListener {
         htmlReporter.config().setReportName("TestNG Test Report");
         htmlReporter.config().setTheme(Theme.STANDARD);
 
-        extent = new ExtentReports();
+            extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
     }
 
